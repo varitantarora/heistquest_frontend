@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
 
   const login = (values) => {
     axios
-      .post("/auth/login", values)
+      .post("http://localhost:3307/auth/login", values)
       .then((response) => {
         setAccessToken(response.data.accessToken);
         setRefreshToken(response.data.refreshToken);
@@ -34,7 +34,7 @@ const AuthProvider = ({ children }) => {
     };
   
     axios
-      .post(`/auth/${id}/logout`, {token:refreshToken} , config)
+      .post(`http://localhost:3307/auth/${id}/logout`, {token:refreshToken} , config)
       .then((response) => {
         console.log(response.data);
       })
@@ -52,7 +52,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const refreshTokenInterval = setInterval(() => {
       axios
-        .post("/auth/refresh-token", { refreshToken })
+        .post("http://localhost:3307/auth/refresh-token", { refreshToken })
         .then((response) => {
           setAccessToken(response.data.accessToken);
           localStorage.setItem("accessToken", response.data.accessToken);

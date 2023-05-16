@@ -7,11 +7,15 @@ import {AuthProvider} from "./contexts/AuthContext";
 import Puzzle from "./components/pages/puzzle/Puzzle";
 import Dashboard from "./components/pages/scores/Dashboard";
 import Leaderboard from "./components/pages/scores/Leaderboard";
+import BackgroundImage from "./components/UI/BackgroundImage";
 
 function App() {
   return (
     <AuthProvider>
         <div className="">
+          
+        <BackgroundImage opacity={0.5} />
+
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/:userId" element={<Home/>}/>

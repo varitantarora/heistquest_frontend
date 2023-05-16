@@ -93,8 +93,8 @@ const Puzzle = () => {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col justify-center items-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full mx-auto">
+    <div className=" min-h-screen flex flex-col justify-center items-center">
+      <div className="bg-white bg-opacity-30 p-8 rounded-lg shadow-lg max-w-3xl w-full mx-auto">
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-bold">Puzzle Game</h1>
           <button
