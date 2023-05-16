@@ -32,7 +32,7 @@ In this game, you'll be taking on the role of a member of the Professor's team, 
   - leaderboard (only logges in user can see), 
   - admin panel (admin only)
 
-#Detailed view of the game
+# Detailed view of the game
  The project is based on the central theme of money heist and has been developed as a way to test soft skills.
  
  ## Gameplay Rules
