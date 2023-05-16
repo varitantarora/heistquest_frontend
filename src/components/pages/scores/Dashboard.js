@@ -17,7 +17,7 @@ const Dashboard = () => {
         },
       };
     axios
-      .get("/dashboard",config)
+      .get("https://heistquest.vercel.app/api/dashboard",config)
       .then((response) => setUsersData(response.data))
       .catch((error) => setError(error));
   }, []);
@@ -26,15 +26,15 @@ const Dashboard = () => {
 //     return <div>Error: {error.message}</div>;
 //   }
 
-  if (usersData.length === 0) {
-    return <div>Loading...</div>;
-  }
-
+  // if (usersData.length() === 0) {
+  //   return <div>Loading...</div>;
+  // }
+console.log(usersData);
   return (
-    <div className="bg-gray-100 px-8 py-4">
+    <div className="text-gray-700 px-8 py-4">
   <h1 className="text-3xl font-bold mb-4">Dashboard</h1>
   {usersData.map((user) => (
-    <div key={user.userId} className="bg-white rounded-lg shadow-md p-8 mb-4">
+    <div key={user.userId} className="bg-white bg-opacity-30 rounded-lg shadow-md p-8 mb-4">
       <h2 className="text-xl font-bold mb-4">{user.name}</h2>
       <div className="flex flex-col md:flex-row justify-between">
         <div className="mb-4 md:mb-0">

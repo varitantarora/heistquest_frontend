@@ -6,14 +6,7 @@ import axios from 'axios';
 const Signup = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center h-screen">
-      <div className="md:w-1/2">
-        <img
-          src="https://via.placeholder.com/600x680"
-          alt="Signup"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="md:w-1/2 p-10">
+      <div className=" text-gray-500 md:w-1/3 py-16 px-16 bg-white bg-opacity-30">
         <h1 className="text-3xl font-bold mb-5">Registration</h1>
         <Formik
           initialValues={{ name: '', email: '', password: '' }}
@@ -26,7 +19,7 @@ const Signup = () => {
           })}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             axios
-              .post(`/auth/register`, values)
+              .post(`https://heistquest.vercel.app/api/auth/register`, values)
               .then((response) => {
                 alert('Registration successful. Please log in.');
                 resetForm();
@@ -90,7 +83,7 @@ const Signup = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
               >
                 Submit
               </button>

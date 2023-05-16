@@ -1,11 +1,10 @@
 import React from "react";
-import heistImage from "../../media/heist.jpg";
 
 function BackgroundImage({ opacity }) {
   return (
     <div
       style={{
-        backgroundImage: `url(${heistImage})`,
+        backgroundImage: `url('https://res.cloudinary.com/dsllzbivs/image/upload/v1684252319/heistquest/heist_gj9czs.jpg')`,
         opacity: opacity,
         position: "fixed",
         top: 0,
