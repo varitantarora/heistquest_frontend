@@ -174,7 +174,7 @@ const Puzzle = () => {
                   className="border text-black border-gray-400 rounded-lg px-4 py-2 ml-4 focus:outline-none"
                   type="text"
                   value={answer}
-                  onChange={(event) => setAnswer(event.target.value.toUpperCase())}
+                  onChange={(event) => setAnswer(event.target.value)}
                 />
               </label>
               {error && (
